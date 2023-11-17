@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Switch-Case + , - , * , / , % -->
+    <script>
+        
+        choice='+','-','*','/','%';
+        num1 = 100;
+        num2 = 20;
+        
+        document.write("num1 = 100 <br> num2 = 20 <br><br>");
+        switch(choice)
+        {
+            case '+' : document.write("Addition of 2 numbers is" + " " + (num1+num2));
+            document.write("<br>");
+            // break;
+            case '-' : document.write("Substraction of 2 numbers is" + " " + (num1-num2));
+            document.write("<br>");
+            // break;
+            case '*' : document.write("Multiplication of 2 numbers is" + " " + (num1*num2));
+            document.write("<br>");
+            // break;
+            case '/' : document.write("Division of 2 numbers is" + " " + (num1/num2));
+            document.write("<br>");
+            // break;
+            case '%' : document.write("Modulo of 2 numbers is" + " " + (num1%num2));
+            document.write("<br>");
+            // break;
+            default : document.write("Out Of Range....");
+        }
+
+    </script>
+</body>
+
+</html>

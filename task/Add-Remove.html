@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .css
+        {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Devarsh</h1>
+    <button id="b1" onclick="AddCss()">Add Css</button>
+    <button id="b2" onclick="RemoveCss()">Remove Css</button>
+    <button id="b3" onclick="AddRemoveCss()">Add Css</button>
+
+    <script>
+
+        h1_tag = document.getElementById('h1');
+        b3_btn = document.getElementById('b3');
+
+        function AddCss()
+        {
+            if(h1_tag.style.color == "")
+            {
+                h1_tag.style.color = "crimson";
+            }
+        }
+        function RemoveCss()
+        {
+            if(h1_tag.style.color == "crimson")
+            {
+                h1_tag.style.color = "";
+            }
+        }
+        function AddRemoveCss()
+        {
+            if(h1_tag.style.color == "")
+            {
+                h1_tag.style.color = "crimson";
+                b3_btn.innerHTML = "Remove CSS";
+            }
+            else
+            {
+                h1_tag.style.color = "";
+                b3_btn.innerHTML = "Add CSS";
+            }
+        }
+    </script>
+</body>
+</html>
