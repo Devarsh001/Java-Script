@@ -8,5 +8,5 @@ window.confirm("Are you sure?");
 window.prompt("5 + 5 = ? ");
 window.print();
 
-document.getElementById('devarsh').innerHTML = "Devarsh Soni"
-document.getElementById('devarsh').innerText = "Devarsh H. Soni"
+document.getElementById('devarsh').innerHTML = "Devarsh Soni";
+document.getElementById('devarsh').innerText = "Devarsh H. Soni";
