@@ -1,0 +1,22 @@
+@media(max-width:600px)
+{
+    #nav
+    {
+        justify-content: left;
+        padding-left: 30px;
+    }
+    .list
+    {
+        visibility: hidden;
+    }
+    #btn
+    {
+        display: block;
+        background: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-size: 25px;
+        color: black;
+    }
+}
