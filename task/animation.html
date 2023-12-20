@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background: lightgreen;
+        }
+        .container
+        {
+            height: 400px;
+            width: 50%;
+            background: url(Images/walking\ men.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin: auto;
+            overflow-x: hidden;
+        }
+        .slider
+        {
+            position: absolute;
+            height: 400px;
+            width: 100%;
+            background: lightgreen;
+            animation: slide 1s linear infinite;
+        }
+        .slider2
+        {
+            position: absolute;
+            height: 400px;
+            width: 100%;
+            background: lightgreen;
+            animation: slide2 1s linear infinite;
+        }
+        @keyframes slide{
+            0%{transform: translateX(0%);}
+            10%{transform: translateX(10%);}
+            20%{transform: translateX(20%);}
+            30%{transform: translateX(30%);}
+            40%{transform: translateX(40%);}
+            50%{transform: translateX(50%);}
+            60%{transform: translateX(60%);}
+            70%{transform: translateX(70%);}
+            80%{transform: translateX(80%);}
+            90%{transform: translateX(90%);}
+            100%{transform: translateX(100%);}
+        }
+        @keyframes slide2{
+            0%{transform: translateX(-114%);}
+            10%{transform: translateX(-104%);}
+            20%{transform: translateX(-94%);}
+            30%{transform: translateX(-84%);}
+            40%{transform: translateX(-74%);}
+            50%{transform: translateX(-64%);}
+            60%{transform: translateX(-54%);}
+            70%{transform: translateX(-44%);}
+            80%{transform: translateX(-34%);}
+            90%{transform: translateX(-24%);}
+            100%{transform: translateX(-14%);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider"></div>
+        <div class="slider2"></div>
+    </div>
+</body>
+</html>

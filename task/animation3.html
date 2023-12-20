@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            height: 400px;
+            width: 500px;
+            background: gray;
+            margin: auto;
+            position: relative;
+        }
+        .img
+        {
+            position: absolute;
+            height: 400px;
+            width: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* transform: translateX(50%); */
+            /* background: rebeccapurple; */
+            /* background: url(Images/i1.jpeg); */
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: slide 2s linear infinite;
+        }
+        @keyframes slide
+        {
+            /* 0%{} */
+            20%{background: url(Images/i1.jpeg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+            40%{background: url(Images/i2.jpeg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+            60%{background: url(Images/i3.jpeg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+            80%{background: url(Images/i4.jpeg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+            100%{background: url(Images/i5.jpeg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img"></div>
+    </div>
+</body>
+</html>
