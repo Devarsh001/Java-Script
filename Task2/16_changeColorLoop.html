@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change color of box on click of Button (array / random)</title>
+
+    <!-- CSS Start -->
+    <style>
+        #container,#container2
+        {
+            height: 200px;
+            width: 200px;
+            margin: auto;
+            border: 2px solid;
+        }
+        #btn,#btn2
+        {
+            display: block;
+            margin: 10px auto;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Box 1 & Button 1 -->
+    <div id="container"></div>
+    <button id="btn" onclick="changeColor()">Change Colour Using Array</button>
+    
+    <!-- Box 2 and Button 2 -->
+    <div id="container2"></div>
+    <button id="btn2" onclick="randomColor()">Random Colour Using Math Method</button>
+
+    <!-- Script Start -->
+    <script>
+
+        // First box and first button
+        let container = document.getElementById("container");
+        let btn = document.getElementById("btn");
+
+        // Second box and second button
+        let container2 = document.getElementById("container2");
+        let btn2 = document.getElementById("btn2");
+
+        // Index Declaration
+        let index = -1;
+
+        // Array Of 10 Colors
+        let colors = ["red","blue","orange","green","gray","pink","violet","yellow","olive","skyblue"];
+        console.log(colors);
+        console.log(typeof(colors));
+        console.log(colors[index]);
+
+        // To not give background colour initially
+        container.style.background = colors[-1];
+
+        // For Loop Start
+        // for(let i=0;i<colors.length-1;i++)
+        // {
+            // Function to change color on click of button from array
+            function changeColor()
+            {
+                // Condition to restart process once the array reaches its last value
+                if(index == colors.length-1)
+                {
+                    alert("The color changing process has ended it will start again once you press 'close'");
+                    index = -1;
+                }
+                index++;
+                container.style.background = colors[index];
+                console.log(container.style.background = colors[index]);
+            }
+
+            // Funtion to randomly change color of div on each click of a button using inbuilt methods of JS (Math)
+            function randomColor()
+            {
+                // 1. Picking random number from 0 to 1 using Math.random() 
+
+                // 2. then convering that number type to string using tostring() and converting it to hexadecimal by providing value '16' into toString() method 
+                
+                // 3. then as we need 6 letters for hexadecimal color code we are using slice()/sunstring() method to remove unwanted letters from the hexadecimal code (0-9 & a a-f) as it includes 16 digits. we provide values(2,6) into slice method as first 2 numbers will always be '0' and '.' as Math.random() method gets random value from 0 to 1 so by providing 2 it will cut first 2 letters from the hexa decimal string and second value is 8 as we need 6 letters for hex-color-code. 
+                
+                // 4. lastly we used padEnd() method which is usefull to over come error such as what if some one pass value like(3,8) or something like that in slice() so there will only 5 letters and we need exact 6 letters for hex-color-code. here, padEnd method is used to fix the length of variable and if that value has not required length we can fulfill it by providing additional value at the end of the hex code.
+                
+                let a = `#${Math.random().toString(16).slice(2,8).padEnd(6,0)}`;
+                container2.style.background = a;
+                console.log(container2.style.background = a);
+            }
+        // }
+        
+    </script>
+    
+</body>
+</html>

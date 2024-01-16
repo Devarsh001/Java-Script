@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark-Sheet</title>
+
+    <style>
+        div
+        {
+            border: 1px solid black;
+            text-align: center;
+            background: lightsteelblue;
+            padding: 100px 0;
+            width: 50%;
+        }
+        li
+        {
+            list-style:decimal;
+        }
+        div,table
+        {
+            margin: auto;
+        }
+        input
+        {
+            border: 1px solid black;
+            outline: none;
+        }
+        button
+        {
+            height: 35px;
+            width: 70px;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <h1> ---- <u> Marksheet for Information Technology </u> ---- </h1>
+        <h3> <u> Enter Marks Out Of 50 </u> </h3>
+        
+        <!-- <li>C language : <input type="numbers" name="" id="c"></li>
+        <li>C++ language : <input type="numbers" name="" id="c++"></li>
+        <li>Database : <input type="numbers" name="" id="database"></li>
+        <li>HTML : <input type="numbers" name="" id="html"></li>
+        <li>CSS : <input type="numbers" name="" id="css"></li>
+        <li>PHP : <input type="numbers" name="" id="php"></li>
+        <li>Core Java : <input type="numbers" name="" id="core-java"></li><br> -->
+
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td>1. C language :</td>
+                    <td><input type="text" name="" id="c" required></td>
+                </tr>
+                <tr>
+                    <td>2. C++ language : </td>
+                    <td><input type="text" name="" id="c++" required></td>
+                </tr>
+                <tr>
+                    <td>3. Database : </td>
+                    <td><input type="text" name="" id="database" required></td>
+                </tr>
+                <tr>
+                    <td>4. HTML : </td>
+                    <td><input type="text" name="" id="html" required></td>
+                </tr>
+                <tr>
+                    <td>5. CSS : </td>
+                    <td><input type="text" name="" id="css" required></td>
+                </tr>
+                <tr>
+                    <td>6. PHP : </td>
+                    <td><input type="text" name="" id="php" required></td>
+                </tr>
+                <tr>
+                    <td>7. Corejava : </td>
+                    <td><input type="text" name="" id="core-java" required></td>
+                </tr>
+            </table>
+        </form>
+        
+        <br>
+        
+        <button id="btn" onclick="result()">Result</button><br><br>
+        <span> Total is : <input type="numbers" name="" id="total"> / 350</span><br>
+        <span> Percentage : <input type="text" name="" id="per"> % </span><br><br>
+        <span id="span"> </span><br><br>
+        <button onclick="window.location.reload()">Refresh</button>
+
+        <script>
+
+            div = document.getElementsByTagName('div');
+            btn = document.getElementById('btn');
+            total = document.getElementById('total');
+            per = document.getElementById('per');
+            span = document.getElementById('span');
+            // marks = document.getElementsByClassName('marks');
+
+            c = document.getElementById('c');
+            c_plus = document.getElementById('c++');
+            database = document.getElementById('database');
+            html = document.getElementById('html');
+            css = document.getElementById('css');
+            php = document.getElementById('php');
+            corejava = document.getElementById('core-java');
+
+            function result()
+            {
+                if(c.value >= 0 && c.value <= 50 && c_plus.value >= 0 && c_plus.value <= 50 && database.value >= 0 && database.value <= 50 && html.value >= 0 && html.value <= 50 && css.value >= 0 && css.value <= 50 && php.value >= 0 && php.value <= 50 && corejava.value >= 0 && corejava.value <= 50)
+                {
+                    total.value = Number(c.value) + Number(c_plus.value) + Number(database.value) + Number(html.value) + Number(css.value) + Number(php.value) + Number(corejava.value);
+
+                    per.value = ((total.value)*100)/350;
+
+                    if(per.value >= 35 && per.value <= 100)
+                    {
+                        span.innerHTML = "Congratulations You are Pass...   :)";
+                    }
+                    else
+                    {
+                        span.innerText = "Sorry You are Fail...  :(";
+                    }
+                }
+                else
+                {
+                    alert("Invalid Marks Input");
+                    total.value = "INVALID MARKS INPUT";
+                    per.value = "Invalid....";
+                    span.innerHTML = "----- ERROR -----";
+                }
+            }
+
+        </script>
+
+    </div>
+</body>
+</html>

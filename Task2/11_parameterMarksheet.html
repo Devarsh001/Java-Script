@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{text-align: center;}
+        input{outline: none;}
+    </style>
+</head>
+<body>
+    <h1>Result Function with Parameter</h1>
+    <br><hr>
+
+    <form action="">
+        <strong>-- Enter Marks Between 0 to 70 --</strong><br>
+        
+        <input type="text" name="math" id="maths" required placeholder="Maths" oninput="validate(this, 's1', 'marks input')" />
+        <span id="s1"></span>
+        <br>
+        
+        <input type="text" name="science" id="science" required placeholder="Science" oninput="validate(this, 's2', 'marks input')" />
+        <span id="s2"></span>
+        <br>
+        
+        <input type="text" name="english" id="english" required placeholder="English" oninput="validate(this, 's3', 'marks input')" />
+        <span id="s3"></span>
+        <br>
+        
+        <input type="text" name="history" id="history" required placeholder="History" oninput="validate(this, 's4', 'marks input')" />
+        <span id="s4"></span>
+        <br>
+        
+        <input type="text" name="computer" id="computer" required placeholder="Computer" oninput="validate(this, 's5', 'marks input')" />
+        <span id="s5"></span>
+        <br>
+    </form><br>
+    
+    <button id="btn" onclick="result()">Result</button><br><br>
+    
+    <input type="text" name="total" id="total" placeholder="your total is"> <strong>/ 350</strong><br>
+    
+    <input type="text" name="percentage" id="percentage" placeholder="your Percentage is"> <strong>%</strong><br>
+    
+    <span id="span"> </span> <br>
+    
+    <button onclick="window.location.reload()">Refresh</button>
+
+    <script src="11_script.js"></script>
+    <!-- <script src="11_script2.js"></script> -->
+</body>
+</html>

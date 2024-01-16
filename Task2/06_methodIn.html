@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Operation</title>
+
+    <style>
+        div
+        {
+            height: auto;
+            text-align: center;
+            padding: 200px 0;
+            background: lightcoral;
+        }
+        button,input,span
+        {
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div>
+        <h1> ---- <u> Methods Operations </u> ---- </h1>
+
+        <span> Enter Input : <input type="text" name="" id="inp1" required> </span> <br>
+
+        <button onclick="length()">Length</button>
+        <button onclick="upper()">Upper</button>
+        <button onclick="lower()">Lower</button>
+        <button onclick="trim()">Trim</button>
+        <br>
+        <button onclick="startWith()">Start With</button>
+        <button onclick="repeat()">Repeat Result</button>
+        <button onclick="indexOf()">Index Of 'a'</button>
+        <button onclick="charAt()">Char At no.4</button>
+
+        <br><Span>Answer is <input type="text" name="" id="ans"> </Span><br>
+
+    </div>
+
+    <script>
+
+        let inp_1 = document.getElementById('inp1');
+        let ans = document.getElementById('ans');
+
+        function length()
+        {
+            ans.value = (inp_1.value).length;
+            console.log(ans.value);
+        }
+        function upper()
+        {
+            ans.value = (inp_1.value).toUpperCase();
+            console.log(ans.value);
+        }
+        function lower()
+        {
+            ans.value = (inp_1.value).toLowerCase();
+            console.log(ans.value);
+        }
+        function trim()
+        {
+            ans.value = (inp_1.value).trim();
+            console.log(ans.value);
+        }
+        function startWith()
+        {
+            ans.value = (inp_1.value).startsWith("==>");
+            console.log(ans.value);
+        }
+        function repeat()
+        {
+            ans.value = (inp_1.value).repeat(2);
+            console.log(ans.value);
+        }
+        function indexOf()
+        {
+            ans.value = (inp_1.value).indexOf("a");
+            console.log(ans.value);
+        }
+        function charAt()
+        {
+            ans.value = (inp_1.value).charAt(4);
+            console.log(ans.value);
+        }
+
+    </script>
+
+</body>
+</html> 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="17_slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Simple JavaScript Slider</h1>
+        
+        <div class="container2">
+            <!-- Image0 -->
+            <!-- <div class="i0">
+                <img src="" id="img0" alt="img0" height="100%" width="100%">
+            </div> -->
+            <!-- Image1 -->
+            <div class="i1">
+                <img src="../Images/1.jpeg" id="img1" alt="img1" height="100%" width="100%">
+            </div>
+            <!-- Image2 -->
+            <div class="i2">
+                <img src="../Images/2.jpeg" id="img2" alt="img2"  height="100%" width="100%">
+            </div>
+            <!-- Image3 -->
+            <div class="i3">
+            <img src="../Images/3.jpeg" id="img3" alt="img3"  height="100%" width="100%">
+            </div>
+            <!-- Image4 -->
+            <div class="i4">
+                <img src="../Images/4.jpeg" id="img4" alt="img4"  height="100%" width="100%">
+            </div>
+            <!-- Image5 -->
+            <div class="i5">
+                <img src="../Images/5.jpeg" id="img5" alt="img5"  height="100%" width="100%">
+            </div>
+            <!-- Image6 -->
+            <!-- <div class="i6">
+                <img src="" id="img6" alt="img6"  height="100%" width="100%">
+            </div> -->
+        </div>
+        
+        <!-- Previous & Next Buttons -->
+        <div class="btns">
+            <button id="b1" onclick="prev()"><i class="fa fa-long-arrow-left"></i></button>
+            <button id="b2" onclick="next()"><i class="fa fa-long-arrow-right"></i></button>
+        </div>
+
+    </div>
+
+    <script>
+        let img1 = document.getElementById('img1');
+        let img2 = document.getElementById('img2');
+        let img3 = document.getElementById('img3');
+        let img4 = document.getElementById('img4');
+        let img5 = document.getElementById('img5');
+
+        function next()
+        {
+            if(img3.src.match("../Images/3.jpeg"))
+            {
+                img1.src = "../Images/2.jpeg";
+                img2.src = "../Images/3.jpeg";
+                img3.src = "../Images/4.jpeg";
+                img4.src = "../Images/5.jpeg";
+                img5.src = "../Images/1.jpeg";
+            }
+            else if(img3.src.match("../Images/4.jpeg"))
+            {
+                img1.src = "../Images/3.jpeg";
+                img2.src = "../Images/4.jpeg";
+                img3.src = "../Images/5.jpeg";
+                img4.src = "../Images/1.jpeg";
+                img5.src = "../Images/2.jpeg";
+            }
+            else if(img3.src.match("../Images/5.jpeg"))
+            {
+                img1.src = "../Images/4.jpeg";
+                img2.src = "../Images/5.jpeg";
+                img3.src = "../Images/1.jpeg";
+                img4.src = "../Images/2.jpeg";
+                img5.src = "../Images/3.jpeg";
+            }
+            else if(img3.src.match("../Images/1.jpeg"))
+            {
+                img1.src = "../Images/5.jpeg";
+                img2.src = "../Images/1.jpeg";
+                img3.src = "../Images/2.jpeg";
+                img4.src = "../Images/3.jpeg";
+                img5.src = "../Images/4.jpeg";
+            }
+            else
+            {
+                img1.src = "../Images/1.jpeg";
+                img2.src = "../Images/2.jpeg";
+                img3.src = "../Images/3.jpeg";
+                img4.src = "../Images/4.jpeg";
+                img5.src = "../Images/5.jpeg";
+            }
+        }
+        function prev()
+        {
+            if(img3.src.match("../Images/3.jpeg"))
+            {
+                img3.src = "../Images/2.jpeg";
+                img4.src = "../Images/3.jpeg";
+                img5.src = "../Images/4.jpeg";
+                img1.src = "../Images/5.jpeg";
+                img2.src = "../Images/1.jpeg";
+            }
+            else if(img3.src.match("../Images/2.jpeg"))
+            {
+                img3.src = "../Images/1.jpeg";
+                img4.src = "../Images/2.jpeg";
+                img5.src = "../Images/3.jpeg";
+                img1.src = "../Images/4.jpeg";
+                img2.src = "../Images/5.jpeg";
+            }
+            else if(img3.src.match("../Images/1.jpeg"))
+            {
+                img3.src = "../Images/5.jpeg";
+                img4.src = "../Images/1.jpeg";
+                img5.src = "../Images/2.jpeg";
+                img1.src = "../Images/3.jpeg";
+                img2.src = "../Images/4.jpeg";
+            }
+            else if(img3.src.match("../Images/5.jpeg"))
+            {
+                img3.src = "../Images/4.jpeg";
+                img4.src = "../Images/5.jpeg";
+                img5.src = "../Images/1.jpeg";
+                img1.src = "../Images/2.jpeg";
+                img2.src = "../Images/3.jpeg";
+            }
+            else
+            {
+                img3.src = "../Images/3.jpeg";
+                img4.src = "../Images/4.jpeg";
+                img5.src = "../Images/5.jpeg";
+                img1.src = "../Images/1.jpeg";
+                img2.src = "../Images/2.jpeg";
+            }
+        }
+
+    </script>
+</body>
+</html>

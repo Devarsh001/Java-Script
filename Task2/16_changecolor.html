@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container
+        {
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            margin: auto;
+        }
+        #btn
+        {
+            display: block;
+            margin: 10px auto;
+            cursor: pointer;
+        }
+        #clrName,#num
+        {
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <button id="btn" onclick="changeColor()">Click to Change Colour</button>
+    <span id="clrName"></span>
+    <span id="num"></span>
+
+    <script>
+        let container = document.getElementById("container");
+        let btn = document.getElementById("btn");
+        let spnId = document.getElementById("clrName");
+        let num = document.getElementById("num");
+
+        let colors = ["red","green","blue","orange","yellow","pink","khakhi","skyblue","violet","rosybrown"];
+
+        let index = -1;
+        container.style.backgroundColor = colors[index];
+
+        function changeColor() 
+        {
+            if(index == (colors.length/2))
+            {
+                let cnfrm = confirm("Press Ok to continue and cancel to restart");
+                if(cnfrm == true)
+                {
+                    container.style.backgroundColor = colors[index];
+                }
+                else
+                {
+                    index = -1;
+                }
+            }
+            if(index == colors.length-1)
+            {
+                alert("Press Ok to restart the process");
+                index = -1;
+            }
+            index++;
+            container.style.backgroundColor = colors[index];
+            spnId.innerHTML = colors[index];
+            num.innerHTML = colors[index].indexOf(colors[index]);
+
+        }
+    </script>
+</body>
+</html>

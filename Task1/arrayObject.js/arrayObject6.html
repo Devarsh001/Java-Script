@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let obj = {
+            name : "Devarsh",
+            city : "Ahmedabad",
+            pin : "380006"
+        };
+        console.log(Object.keys(obj).length);
+
+        let arr = [1,"Hello",true,obj];
+
+        document.write(arr[3]);
+        document.write("<br>");
+
+        for(let i in obj)
+        {
+            let j;
+            j=obj[i];
+            document.write(i + "-" + j);
+            document.write("<br>");
+        }
+        
+        // for(i in obj)
+        // {
+        //     document.write(i);
+        //     document.write("<br>");
+        // }
+
+        // let arr = [1,"Hello",true,obj];
+        // arr.forEach(function(v,i,arr){
+        //     document.write("Value => " + v + " / " + "Index ==>" + i + " / " + "Array ==>" + arr);
+        //     document.write("<br>");
+        // })
+        // document.write("<br>");
+        // const numbers = [65, 44, 12, 4];
+        // numbers.forEach(function(v,i,numbers){
+        //     document.write("Value => " + v + " / " + "Index ==>" + i + " / " + "Array ==>" + numbers);
+        //     document.write("<br>");
+        // })
+        
+
+        </script>
+</body>
+</html>

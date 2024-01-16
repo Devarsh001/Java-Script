@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color TimeOut</title>
+    <style>
+        body{text-align: center;}
+        #container
+        {
+            height: 20vh;
+            width: 20vw;
+            border: 2px solid lightgray;
+            margin: auto;
+        }
+        #btn
+        {
+            height: 5vh;
+            width: 5vw;
+            background: linear-gradient(red,blue,skyblue,white);
+            color: white;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <!-- <button id="btn" onclick="clr()">Click</button> -->
+
+    <script>
+        let box = document.getElementById('container');
+        // let btn = document.getElementById('btn');
+
+        
+        setInterval(function chnge()
+        {
+            let bgColor = `#${Math.random().toString(16).slice(2,8).padEnd(6,0)}`;
+            box.style.background = bgColor;
+        },1000)
+    </script>
+</body>
+</html>

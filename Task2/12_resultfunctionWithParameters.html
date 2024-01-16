@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <form action="">
+        <input type="text" name="html" id="html" placeholder="HTML" pattern="\d{2}" required oninput="validate(this, 's1')">
+        <span id="s1">&lt;- Input marks here</span>
+        <br>
+        <input type="text" name="css" id="css" placeholder="CSS" pattern="\d{2}" required oninput="validate(this, 's2')">
+        <span id="s2">&lt;- Input marks here</span>
+        <br>
+        <input type="text" name="javascript" id="javascript" placeholder="JavaScript" pattern="\d{2}" required oninput="validate(this, 's3')">
+        <span id="s3">&lt;- Input marks here</span>
+        <br>
+        <input type="text" name="jquery" id="jquery" placeholder="jQuery" pattern="\d{2}" required oninput="validate(this, 's4')">
+        <span id="s4">&lt;- Input marks here</span>
+        <br>
+        <input type="text" name="bootstrap" id="bootstrap" placeholder="Bootstrap" pattern="\d{2}" required oninput="validate(this, 's5')">
+        <span id="s5">&lt;- Input marks here</span>
+        <br>
+    </form>
+ 
+    <button>Result</button>
+
+    <script src="12_script.js"></script>
+</body>
+</html>

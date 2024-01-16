@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main
+        {
+            height: 80vh;
+            width: 100%;
+            background: red;
+        }
+        .btns
+        {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px 0;
+        }
+        button
+        {
+            padding: 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    <div class="btns">
+        <button id="prev" onclick="prv()">Previous</button>
+        <button id="next" onclick="nxt()">Next</button>
+    </div>
+
+
+    <!-- Script Start -->
+
+    <script>
+
+        let box = document.getElementById("main");
+        let prev = document.getElementById("prev");
+        let next = document.getElementById("next");
+
+        let index = -1;  
+        let slide = ["red","green","blue","gray","coral"];
+
+        box.style.background = slide[2];
+
+        function nxt()
+        {
+            if(index == slide.length-1)
+            {
+                index = -1;
+            }
+            index++;
+            box.style.background = slide[index];
+            console.log(box.style.background = slide[index]);
+        }
+        function prv()
+        {
+            if(index == slide.indexOf(0))
+            {
+                index = slide.length-1;
+                console.log(index = slide.length);
+            }
+            index--;
+            box.style.background = slide[index];
+            console.log(box.style.background = slide[index]);
+        }
+
+    </script>
+</body>
+</html>

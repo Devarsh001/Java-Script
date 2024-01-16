@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Operation</title>
+
+    <style>
+        div
+        {
+            height: auto;
+            text-align: center;
+            padding: 200px 0;
+            background: lightcoral;
+        }
+        button,input,span
+        {
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        button
+        {
+            display: inline-block;
+            height: 45px;
+            width: 45px;
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div>
+        <h1> ---- <u> Math Operations </u> ---- </h1>
+
+        <span> Enter no.1 : <input type="text" name="" id="inp1" required> </span> <br>
+        <span> Enter no.2 : <input type="text" name="" id="inp2" required> </span> <br>
+
+        <button onclick="add()">+</button>
+        <button onclick="mul()">*</button>
+        <button onclick="sub()">-</button>
+        <button onclick="div()">/</button>
+        <button onclick="mod()">%</button><br>
+
+        <Span>Answer is <input type="text" name="" id="ans"> </Span><br>
+
+        <!-- <span>Increment <input type="text" name="" id="inc"> </span>
+        <button>++</button>
+        <Span>After increent Answer is <input type="text" name="" id="incans"> </Span><br>
+
+        <span>Decrement <input type="text" name="" id="dec"> </span>
+        <button>--</button>
+        <Span>After decrement Answer is <input type="text" name="" id="decans"> </Span> -->
+    </div>
+
+    <script>
+
+        let inp_1 = document.getElementById('inp1');
+        let inp_2 = document.getElementById('inp2');
+        let ans = document.getElementById('ans');
+        // let inc = document.getElementById('inc');
+        // let dec = document.getElementById('dec');
+        // let incans = document.getElementById('incans');
+        // let decans = document.getElementById('decans');
+
+        function add()
+        {
+            ans.value = Number(inp_1.value) + Number(inp_2.value);
+            console.log(ans.value);
+        }
+        function sub()
+        {
+            ans.value = inp_1.value - inp_2.value;
+            console.log(ans.value);
+        }
+        function mul()
+        {
+            ans.value = inp_1.value * inp_2.value;
+            console.log(ans.value);
+        }
+        function div()
+        {
+            ans.value = inp_1.value / inp_2.value;
+            console.log(ans.value);
+        }
+        function mod()
+        {
+            ans.value = inp_1.value % inp_2.value;
+            console.log(ans.value);
+        }
+        // function inc()
+        // {
+        //     incans.value = ans.value + Number(1);
+        // }
+        // function dec()
+        // {
+        //     decans.value = ans.value - Number(1);
+        // }
+
+    </script>
+
+</body>
+</html> 

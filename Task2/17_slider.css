@@ -1,0 +1,54 @@
+.container {
+    text-align: center;
+    width: 75%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+/* .i0,.i6 {
+    height: 17.5vw;
+    width: 14%;
+} */
+.i1,.i2,.i3,.i4,.i5{padding: 10px;box-sizing: border-box;}
+.i1,.i5 {
+    height: 20vw;
+    width: 17%;
+}
+.i2,.i4 {
+    height: 24vw;
+    width: 21%;
+    background: url(Images/1.jpeg);
+    background-size: cover;
+}
+.i3 {
+    height: 28vw;
+    width: 24%;
+    background: url(Images/2.jpeg);
+}
+.btns {
+    display: flex;
+    margin: auto;
+    width: 30%;
+    justify-content: space-between;
+}
+button {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+i{
+    cursor: pointer;
+}
+img {
+    object-fit: cover;
+}

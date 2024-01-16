@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function With Parameters</title>
+</head>
+<body>
+    <h1>Function With Parameters</h1>
+
+    <form action="">
+        <strong>UserName :</strong> <input type="text" name="uname" id="uname" onblur="validate(this, e1, ' User Name')" />
+        <span id="e1"></span>
+        <br><br>
+       
+        <strong>UserEmail :</strong> <input type="email" name="uemail" id="uemail" onblur="validate(this, e2, ' User Email')" />
+        <span id="e2"></span>
+        <br><br>
+        
+        <strong>UserPassword :</strong> <input type="password" name="upass" id="upass" onblur="validate(this, e3, ' User Password')" />
+        <span id="e3"></span>
+        <br><br>
+        
+        <strong>UserMobile :s</strong> <input type="text" name="umobile" id="umobile" onblur="validate(this, e4, ' User Mobile')" />
+        <span id="e4"></span>
+        <br><br>
+    
+    </form>
+
+    <script>
+
+        // let userName = document.getElementById("uname");
+        // let userEmail = document.getElementById("uemail");
+        // let userPassword = document.getElementById("upass");
+        // let userMobile = document.getElementById("umobile");
+        // let error1 = document.getElementById("e1");
+        // let error2 = document.getElementById("e2");
+        // let error3 = document.getElementById("e3");
+        // let error4 = document.getElementById("e4");
+
+        function validate(crr, err, msg)
+        {
+            console.log(err);
+            if(crr.value == "")
+            {
+                err.innerText = "Invalid" + msg;
+                err.style.color = "red";
+                console.log(err.innerText);
+            }
+            else
+            {
+                err.innerText = msg + " " + "Valid";
+                err.style.color = "green";
+                console.log(err.innerText);
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider CSS</title>
+    <style>
+      .main {
+        margin: 0;
+        padding: 0;
+      }
+      .imgs {
+        box-sizing: border-box;
+        overflow-x: scroll;
+        display: flex;
+        gap: 20px;
+        padding: 50px 0;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #i1,
+      #i2,
+      #i3,
+      #i4,
+      #i5 {
+        border: 2px solid black;
+        display: inline-block;
+      }
+      #i1,
+      #i5 {
+        height: 200px;
+        width: 200px;
+        /* background: lightcoral; */
+      }
+      #i2,
+      #i4 {
+        height: 300px;
+        width: 300px;
+        /* background: red; */
+      }
+      #i3 {
+        height: 400px;
+        width: 400px;
+        /* background: green; */
+      }
+      .btns
+      {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      button{cursor: pointer;}
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="imgs">
+        <div id="i1"></div>
+        <div id="i2"></div>
+        <div id="i3"></div>
+        <div id="i4"></div>
+        <div id="i5"></div>
+      </div>
+      <div class="btns">
+        <button id="prev" onclick="prev()">Previous</button>
+        <button id="next" onclick="next()">Next</button>
+      </div>
+    </div>
+
+
+    <!-- ---------------------------- -->
+    
+    <script>
+
+        let prev = document.getElementById("prev");
+        let next = document.getElementById("next");
+        let i1 = document.getElementById("i1");
+
+        function prev()
+        {
+            i1.style.background = "blue";
+        }
+        function next()
+        {
+            i1.style.background = "green";
+        }
+    </script>
+
+  </body>
+</html>

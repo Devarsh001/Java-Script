@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            border: 1px solid black;
+        }
+        .main
+        {
+            display: flex;
+            justify-content: space-evenly;
+            box-sizing: border-box;
+            gap: 5px;
+            padding: 100px 0;
+            /* position: relative; */
+            overflow-x: scroll;
+        }
+        .main div
+        {
+            height: 15vw;
+            width: 15vw;
+            box-sizing: border-box;
+            border: 1px solid black;
+            /* position: absolute; */
+            top: 50%;
+        }
+        /* #b1{left: 10%;transform: translate(-90%,-50%);background: blue;}
+        #b2{left: 30%;transform: translate(-70%,-50%);background: red;}
+        #b3{left: 50%;transform: translate(-40%,-50%);background: green;}
+        #b4{right: 30%;transform: translate(70%,-50%);background: black;}
+        #b5{right: 10%;transform: translate(90%,-50%);background: yellow;} */
+        .btns
+        {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px 0;
+        }
+        button
+        {
+            padding: 10px 0;
+            width: 60px;
+            outline: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div id="b1"></div>
+            <div id="b2"></div>
+            <div id="b3"></div>
+            <div id="b4"></div>
+            <div id="b5"></div>
+        </div>
+        <div class="btns">
+            <button id="prev" onclick="prv()">Previous</button>
+            <button id="next" onclick="nxt()">Next</button>
+        </div>
+    </div>
+    <!-- Script Start -->
+    <script>
+        let b1 = document.getElementById("b1");
+        let b2 = document.getElementById("b2");
+        let b3 = document.getElementById("b3");
+        let b4 = document.getElementById("b4");
+        let b5 = document.getElementById("b5");
+        let prev = document.getElementById("prev");
+        let next = document.getElementById("next");
+        let index ;
+
+        // Array of element using push method in JS
+        
+        // let arr = [];
+        // arr.push(b1);
+        // arr.push(b2);
+        // arr.push(b3);
+        // arr.push(b4);
+        // arr.push(b5);
+        
+        // console.log(arr);
+        // console.log(arr[0]);
+        // console.log(arr[1]);
+        // console.log(arr[2]);
+        // console.log(arr[3]);
+        // console.log(arr[4]);
+
+        function nxt()
+        {
+            index++;
+        }
+        function prv()
+        {
+            index--;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods</title>
+    
+</head>
+<body>
+    <h1>-- Inbuilt Methods --</h1>
+    
+    <input type="text" name="" id="inp" >
+    
+    <br>
+    <button id="btn1" onclick="length()">Input Length</button>
+    <button id="btn2" onclick="upper()">To UpperCase</button>
+    <button id="btn3" onclick="lower()">To LowerCase</button>
+    <br>
+    
+    <span id="show"> </span>
+
+    <script>
+
+        let a = document.getElementById("inp").value;
+        let b1 = document.getElementById("btn1");
+        let b2 = document.getElementById("btn2");
+        let b3 = document.getElementById("btn3");
+        let show = document.getElementById("show");
+
+        function length()
+        {
+            console.log(a.length);
+            show.innerHTML = a.length;
+        }
+        function upper()
+        {
+            console.log(a.toUpperCase());
+            show.innerHTML = a.toUpperCase();
+        }
+        function lower()
+        {
+            console.log(a.toLowerCase());
+            show.innerHTML = a.toLowerCase();
+        }
+    </script>
+
+</body>
+</html>

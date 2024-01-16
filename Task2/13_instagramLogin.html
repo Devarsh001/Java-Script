@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="13_style.css">
+    <!-- <link rel="icon" href="logo.jpeg"> -->
+    <link rel="icon" href="../Images/logo.jpeg">
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="container">
+            <h1><img src="../Images/logoname.png" alt=""></h1>
+
+            <div class="login">
+                <input type="text" name="loginDetail" id="loginDetail" oninput="transfer(this, 'lbl1')" onblur="validate(this, 'lbl1', 'Phone number, username, or email')">
+                <label for="loginDetail" id="lbl1">Phone number, username, or email</label>
+                
+            </div>
+
+            <div class="pswrd">
+                <input type="password" name="pass" id="pass" oninput="transfer(this, 'lbl2')" onblur="validate(this, 'lbl2', 'Password')">
+                <label for="pass" id="lbl2">Password</label>
+            </div>
+            
+            
+            <button>Log in</button><br>
+
+            <div class="or">
+                <p>OR</p>
+            </div><br>
+
+            <a class="logA" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official"></i> Log in with Facebook</a>
+
+            <a href="https://www.instagram.com/accounts/password/reset/" target="_blank" class="forget">Forgot password?</a>
+        </div>
+
+        <div class="signUp">
+            <p>Don't have account? <a href="https://www.instagram.com/accounts/emailsignup/" target="_blank" class="sUp">Sign up</a></p>
+        </div>
+        
+        <div class="getApp">
+            <p>Get the app.</p><br>
+            <p class="img">
+                <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=US&pli=1" target="_blank"><img src="../Images/playstore.jpeg" alt="Get it from Playstore"></a>
+
+                <a href="https://apps.microsoft.com/detail/9NBLGGH5L9XT?hl=en-US&gl=US" target="_blank"><img src="../Images/microsoft.png" alt="Get it from Microsoft"></a>
+            </p>
+        </div>
+
+    </div>
+
+
+    <script src="13_script.js"></script>
+</body>
+</html>

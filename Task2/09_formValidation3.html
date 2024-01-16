@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FormValidation</h1>
+
+    <form action="">
+
+        Name : <input type="text" name="" id="name" onblur="return validate()" >
+        <span id="error1"></span>
+        <span id="okay"></span>
+        <br>
+        Email : <input type="email" name="" id="email" onblur="return validate()">
+        <span id="error1"></span>
+        <span id="okay"></span>
+        <br>
+        Password : <input type="password" name="" id="pass" onblur="return validate()">
+        <span id="error1"></span>
+        <span id="okay"></span>
+        <br>
+        Phone : <input type="text" name="" id="contact" onblur="return validate()">
+        <span id="error1"></span>
+        <span id="okay"></span>
+        <br>
+
+    </form>
+    <script>
+        // let uN = document.getElementById("name");
+        // let uEm = document.getElementById("email");
+        // let uPs = document.getElementById("pass");
+        // let uPh = document.getElementById("contact");
+
+        // let err1 = document.getElementById("error1");
+        // let err2 = document.getElementById("erro2");
+        // let err3 = document.getElementById("erro3");
+        // let err4 = document.getElementById("erro4");
+        // let okay = document.getElementById("okay");
+        
+        function validate()
+        {
+            let uN = document.getElementById("name");
+            let uEm = document.getElementById("email");
+            let uPs = document.getElementById("pass");
+            let uPh = document.getElementById("contact");
+
+            let err1 = document.getElementById("error1");
+            let err2 = document.getElementById("erro2");
+            let err3 = document.getElementById("erro3");
+            let err4 = document.getElementById("erro4");
+            let okay = document.getElementById("okay");
+
+            if(uN.value == "")
+            {
+                err1.innerHTML = "Fill this field first";
+                // return false;
+            }
+            else if(uEm.value == "")
+            {
+                // err1.innerHTML = "Okay";
+                err2.innerHTML = "Fill this field first";
+                // return false;
+            }
+            else if(uPs.value == "")
+            {
+                err2.innerHTML = "Okay";
+                err3.innerHTML = "Fill this field first";
+                // return false;
+            }
+            else if(uPs.value == "")
+            {
+                err3.innerHTML = "Okay";
+                err4.innerHTML = "Fill this field first";
+                // return false;
+            }
+            else
+            {
+                okay.innerHTML = "Okay";
+            }
+        }
+    </script>
+</body>
+</html>

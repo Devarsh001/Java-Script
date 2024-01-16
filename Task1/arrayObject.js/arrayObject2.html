@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myCurrentObject = {
+        Movies: {
+          Comedy: {
+            TopRanked: [
+              {
+                id: 99,
+                name: "The Interview",
+                path: ["Movies", "Comedy", "TopRanked"],
+              },
+              {
+                id: 100,
+                name: "Eurotrip",
+                path: ["Movies", "Comedy", "TopRanked"],
+              },
+            ],
+          },
+          Action: [
+            {
+              id: 101,
+              name: "We Were Soldiers",
+              path: ["Movies", "Action"],
+            },
+            {
+              id: 102,
+              name: "The Bell",
+              path: ["Movies", "Action"],
+            },
+          ],
+        },
+        Life: {
+          Financial: {
+            Income: [
+              {
+                id: 103,
+                name: "Making Hundreds",
+                path: ["Life", "Financial", "Income"],
+              },
+              {
+                id: 104,
+                name: "Making Thousands",
+                path: ["Life", "Financial", "Income"],
+              },
+            ],
+          },
+          MonthlySpent: [
+            {
+              id: 105,
+              name: "Just a little bit",
+              path: ["Life", "MonthlySpent"],
+            },
+            {
+              id: 106,
+              name: "Living Large",
+              path: ["Life", "MonthlySpent"],
+            },
+          ],
+        },
+      };
+
+    //   console.log(myCurrentObject);
+    //   console.log(myCurrentObject.Movies);
+    //   console.log(myCurrentObject.Movies.Action);
+    //   console.log(myCurrentObject.Movies.Action[1]);
+    //   console.log(myCurrentObject.Movies.Action[1].name); // The Bell
+    //   document.write(myCurrentObject.Movies.Action[1].name); // The Bell
+    
+    //To print the whole object from an array
+    // document.write(myCurrentObject.Life.Financial.Income[0]);
+    // console.log(myCurrentObject.Life.Financial.Income[0]);
+    
+      document.write("<br>")
+
+    //   console.log(myCurrentObject);
+    //   console.log(myCurrentObject.Life);
+    //   console.log(myCurrentObject.Life.MonthlySpent);
+    //   console.log(myCurrentObject.Life.MonthlySpent[1]);
+    //   console.log(myCurrentObject.Life.MonthlySpent[1].id); // 106
+    // document.write(myCurrentObject.Life.MonthlySpent[1].id) // 106
+    </script>
+  </body>
+</html>
