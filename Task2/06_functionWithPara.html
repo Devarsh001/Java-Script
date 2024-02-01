@@ -21,7 +21,7 @@
         <span id="e3"></span>
         <br><br>
         
-        <strong>UserMobile :s</strong> <input type="text" name="umobile" id="umobile" onblur="validate(this, e4, ' User Mobile')" />
+        <strong>UserMobile :</strong> <input type="text" name="umobile" id="umobile" pattern="[0-9]{10}" onblur="validate(this, e4, ' User Mobile')" />
         <span id="e4"></span>
         <br><br>
     
@@ -29,21 +29,12 @@
 
     <script>
 
-        // let userName = document.getElementById("uname");
-        // let userEmail = document.getElementById("uemail");
-        // let userPassword = document.getElementById("upass");
-        // let userMobile = document.getElementById("umobile");
-        // let error1 = document.getElementById("e1");
-        // let error2 = document.getElementById("e2");
-        // let error3 = document.getElementById("e3");
-        // let error4 = document.getElementById("e4");
-
         function validate(crr, err, msg)
         {
             console.log(err);
             if(crr.value == "")
             {
-                err.innerText = "Invalid" + msg;
+                err.innerText = "Empty" + msg;
                 err.style.color = "red";
                 console.log(err.innerText);
             }

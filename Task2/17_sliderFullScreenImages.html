@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .btns
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+        button
+        {
+            padding: 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: transparent;
+            color: white;
+            -webkit-text-stroke: 1px coral;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="" alt="" id="slide" height="100%" width="100%">
+    <div class="btns">
+        <button id="prev" onclick="prv()"><span>&lt;</span></button>
+        <button id="next" onclick="nxt()"><span>&gt;</span></button>
+    </div>
+    
+    
+    <!-- Script Start -->
+
+    <script>
+
+        let prev = document.getElementById("prev");
+        let next = document.getElementById("next");
+        let slider = document.getElementById('slide');
+
+        slider.style.height = "100vh";
+        slider.style.width = "100vw";
+        let i = 0;
+        
+        let slideArr = ["../Images/1.jpeg","../Images/2.jpeg","../Images/3.jpeg","../Images/4.jpeg","../Images/5.jpeg","../Images/6.jpeg","../Images/7.jpeg"]; 
+        
+        slider.src = slideArr[i];
+
+        function nxt()
+        {
+            i++;
+            if (i > slideArr.length-1) {
+                i = 0;
+            }
+            slider.src = slideArr[i];
+        }
+        function prv()
+        {
+            i--;
+            if (i < 0) 
+            {
+                i = slideArr.length-1;
+            }
+            slider.src = slideArr[i];
+        }
+
+    </script>
+</body>
+</html>

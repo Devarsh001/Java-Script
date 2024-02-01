@@ -9,9 +9,9 @@
     <!-- Using Ternary Operator -->
     <script>
 
-        a=9,b=8,c=7,d=6,e=5;
+        a=9,b=18,c=27,d=36,e=55;
 
-        max = (a>b)? ((a>c)?((a>d)? ((a>e)? a : e) : d) : c) : b;
+        max = (a>b)? ((a>c)?((a>d)? ((a>e)? a : e) : d) : c) : ((b>c)?((b>d)? b:d):((c>d)?c:d));
                     
         document.write(max);
 

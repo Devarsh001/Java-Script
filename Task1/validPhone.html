@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ================================================= -->
+    <form action="">
+      <!-- ================================================= -->
+      Name :<input
+        type="text"
+        name=""
+        id="uName"
+        onblur="return validate1(uName, err1)"
+      />
+      <span id="err1"></span><br />
+      <!-- ================================================= -->
+      Email :
+      <input
+        type="email"
+        name=""
+        id="uEmail"
+        onblur="return validate1(uEmail, err2)"
+      />
+      <span id="err2"></span><br />
+      <!-- ================================================= -->
+      Password :
+      <input
+        type="password"
+        name=""
+        id="uPass"
+        onblur="return validate1(uPass, err3)"
+      />
+      <span id="err3"></span><br />
+      <!-- ================================================= -->
+      Mobile :
+      <input
+        type="text"
+        name=""
+        id="uMobile"
+        pattern="[0-9]{10}"
+        required
+        onblur="return validate1(uMobile, err4)"
+      />
+      <span id="err4"></span><br />
+      <!-- ================================================= -->
+      Age :
+      <input
+        type="text"
+        name=""
+        id="uAge"
+        onblur="return validate1(uAge, err5)"
+      />
+      <span id="err5"></span><br />
+    </form>
+    <!-- ================================================= -->
+    <script>
+      function validate1(data, err) {
+        if (data.value == "") {
+          err.innerHTML = "Required";
+          err.style.color = "red";
+        } else {
+          err.innerHTML = "";
+        }
+      }
+    </script>
+    <!-- ================================================= -->
+  </body>
+</html>
